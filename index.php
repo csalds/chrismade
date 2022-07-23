@@ -1,7 +1,5 @@
-<?php 
+<?php ?>
 
 <html>
  Hello world.
 </html>
-
- ?>
