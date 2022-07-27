@@ -1,5 +1,212 @@
 <?php ?>
 
+<!doctype html>
 <html>
- Hello world.
+
+<head>
+    <title>Chris Made It</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;600&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,Array.prototype.includes,CustomEvent,Object.entries,Object.values,URL"></script>
+    <script src="https://unpkg.com/plyr@3"></script>
+    <link href="https://unpkg.com/plyr@3/dist/plyr.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    
+</head>
+
+<body>
+    <main role="main">
+        <div class="container">
+            <div class="article-container" id="article-container">
+
+                <section class="article-sidebar">
+                    <section class="section-articles collapsible-sidebar">
+                        <h3 class="collapsible-sidebar-title sidenav-title">Project Categories</h3>
+                        <ul>
+                            <li>
+                                <a href="#" class="sidenav-item current-article" id="sales">Sales Enablement</a>
+                            </li>
+                            <li>
+                                <a href="#" class="sidenav-item" id="education">Education &amp; Promotion</a>
+                            </li>
+                            <li>
+                                <a href="#" class="sidenav-item" id="branding">Branding</a>
+                            </li>
+                            <li>
+                                <a href="#" class="sidenav-item" id="video">Video</a>
+                            </li>
+
+                        </ul>
+                    </section>
+                </section>
+
+                <article id="sales-article" class="article">
+
+                    <header class="article-header">
+                        <h1 class="article-title">
+                            Cross-Platform Tools for Sales Enablement
+                        </h1>
+                    </header>
+
+                    <section class="article-info">
+                        <div class="article-content">
+                            <div class="article-body">
+                                <p>Wireframes, design and development for sales tools for a variety of devices &mdash; the web, Windows apps and iOS apps. Design of social media assets for sales promotions.</p>
+                                <div class="img-container" id="img-container">
+                                    <div><img src="img/pella-retail.png" data-link-target="fullscreenImage" data-fullscreen-image-src="img/pella-retail.png" alt="" title="" /></div>
+                                    <div><img src="img/pella-wireframe.jpg" alt="" title="" /></div>
+                                    <div><img src="img/pella-pse.jpeg" alt="" title="" /></div>
+                                    <div><img src="img/pella-game.jpg" alt="" title="" /></div>
+                                    <div><img src="img/pella-social.gif" alt="" title="" /></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <footer>
+                        <div class="article-return-to-top">
+                            <a href="#article-container">Return to top<span class="icon-arrow-up"></span></a>
+                        </div>
+                    </footer>
+
+                </article>
+
+
+                <article id="education-article" class="article">
+
+                    <header class="article-header">
+                        <h1 class="article-title">
+                            Product Education and Retail Promotion
+                        </h1>
+                    </header>
+
+                    <section class="article-info">
+                        <div class="article-content">
+                            <div class="article-body">
+                                <p>Concepting, design and development of digital and physical consumer and retail promotions communicated through engagement microsites and physical in-store elements.</p>
+                                <div class="img-container" id="img-container">
+                                    <div><img src="img/michelin-ayde.jpg" alt="" title="" /></div>
+                                    <div><img src="img/michelin-mli.jpg" alt="" title="" /></div>
+                                    <div><img src="img/michelin-banner.jpg" alt="" title="" /></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <footer>
+                        <div class="article-return-to-top">
+                            <a href="#article-container">Return to top<span class="icon-arrow-up"></span></a>
+                        </div>
+                    </footer>
+
+                </article>
+
+
+                <article id="branding-article" class="article">
+
+                    <header class="article-header">
+                        <h1 class="article-title">
+                            Branding
+                        </h1>
+                    </header>
+
+                    <section class="article-info">
+                        <div class="article-content">
+                            <div class="article-body">
+                                <p>Various branding, illustration and print projects.</p>
+                                <div class="img-container" id="img-container">
+                                    <div><img src="img/mannheim-logo.jpg" alt="" title="" /></div>
+                                    <div><img src="img/mannheim-print.jpg" alt="" title="" /></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <footer>
+                        <div class="article-return-to-top">
+                            <a href="#article-container">Return to top<span class="icon-arrow-up"></span></a>
+                        </div>
+                    </footer>
+
+                </article>
+
+
+                <article id="video-article" class="article">
+
+                    <header class="article-header">
+                        <h1 class="article-title">
+                            Motion Design and Video Editing
+                        </h1>
+                    </header>
+
+                    <section class="article-info">
+                        <div class="article-content">
+                            <div class="article-body">
+                                <p>After Effects, Premiere Pro, creative direction, sound editing.</p>
+                                <div class="img-container" id="img-container">
+                                    <div>
+                                        <video class="js-player" controls crossorigin playsinline poster="img/tmobile-iot.jpg">
+                                             <source src="vid/tmobile-iot.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div>
+                                        <video class="js-player" controls crossorigin playsinline poster="img/gtsb-connected.jpg">
+                                             <source src="vid/gtsb-connected.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div>
+                                        <video class="js-player" controls crossorigin playsinline poster="img/tmobile-home.jpg">
+                                             <source src="vid/tmobile-home.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div>
+                                        <video class="js-player" controls crossorigin playsinline poster="img/michelin-acp.jpg">
+                                             <source src="vid/michelin-acp.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <footer>
+                        <div class="article-return-to-top">
+                            <a href="#article-container">Return to top<span class="icon-arrow-up"></span></a>
+                        </div>
+                    </footer>
+
+                </article>
+
+            </div>
+        </div>
+    </main>
+
+    <div id="overlay" data-link-target="closePopup" style="display: none;">
+    </div>
+    <div id="main-popups-container">
+
+        <!-- Image Viewer Dialog -->
+        <div id="popup-image-viewer" class="fullscreen-popup-dialog popup-dialog" style="display: none;">
+            <div id="popup-image-viewer-content" data-link-target="closeFullscreenPopup" style="width: 1409px; height: 871px;">
+                <img src="" id="imagecontent" style="max-width: 1409px; max-height: 871px;">
+            </div><!-- /popup-image-viewer-content -->
+        </div><!-- /popup-image-viewer -->
+
+    </div>
+    
+    <script type="application/javascript">
+        /*
+        const player = new Plyr('video', {captions: {active: true}});
+        window.player = player;
+        */
+        const players = Array.from(document.querySelectorAll('.js-player')).map((p) => new Plyr(p));
+    </script>
+</body>
+
 </html>

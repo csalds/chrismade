@@ -1,0 +1,499 @@
+body {
+    background-color: #ffffff;
+    color: #011532;
+    font-family: 'Roboto Slab', serif, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 100;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+@media (min-width: 1024px) {
+    body>main {
+        min-height: 65vh;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto Slab', serif, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+a {
+    color: #011532;
+    text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus {
+    text-decoration: underline;
+}
+
+strong {
+    font-weight: 600;
+}
+
+.container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+@media (min-width: 1160px) {
+    .container {
+        padding: 0;
+        width: 90%;
+    }
+}
+
+
+.article-container {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+    .article-container {
+        flex-direction: row;
+    }
+}
+
+
+.article-sidebar {
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    flex: 1 0 auto;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+@media (min-width: 1024px) {
+    .article-sidebar {
+        border: 0;
+        flex: 0 0 17%;
+        height: auto;
+    }
+}
+
+/* Sidebar navigation that collapses on mobile */
+.collapsible-sidebar {
+    flex: 1;
+    max-height: 45px;
+    overflow: hidden;
+    padding: 10px 0;
+    position: relative;
+}
+
+@media (min-width: 1024px) {
+    .collapsible-sidebar {
+        max-height: none;
+        padding: 0;
+    }
+}
+
+.collapsible-sidebar[aria-expanded=true] {
+    max-height: none;
+}
+
+.collapsible-sidebar[aria-expanded=true] .collapsible-sidebar-title:after {
+    content: "\2715";
+}
+
+@media (min-width: 1024px) {
+    .collapsible-sidebar[aria-expanded=true] .collapsible-sidebar-title:after {
+        display: none;
+    }
+}
+
+.collapsible-sidebar-title {
+    margin-top: 0;
+}
+
+.collapsible-sidebar-title:after {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "\25BE";
+    position: absolute;
+    right: 10px;
+}
+
+@media (min-width: 1024px) {
+    .collapsible-sidebar-title:after {
+        display: none;
+    }
+}
+
+[dir=rtl] .collapsible-sidebar-title:after {
+    left: 10px;
+    right: auto;
+}
+
+/***** Article *****/
+.article {
+    /*
+* The article grid is defined this way to optimize readability:
+* Sidebar | Content | Free space
+* 17%     | 66%     | 17%
+*/
+    flex: 1 0 auto;
+}
+
+@media (min-width: 1024px) {
+    .article {
+        flex: 1 0 66%;
+        max-width: 66%;
+        /*min-width: 1024px;*/
+        padding: 15px 8%;
+    }
+}
+
+.article-container {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+    .article-container {
+        flex-direction: row;
+    }
+}
+
+.article-header {
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .article-header {
+        margin-top: 0;
+    }
+}
+
+.article-author {
+    margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    .article-title {
+        flex-basis: 100%;
+        /* Take entire row */
+    }
+}
+
+.article-title .icon-lock:before {
+    content: "\1F512";
+    font-size: 20px;
+    position: relative;
+    left: -5px;
+    vertical-align: baseline;
+}
+
+.article [role="button"] {
+    flex-shrink: 0;
+    /*Avoid collapsing elements in Safari (https://github.com/philipwalton/flexbugs#1-minimum-content-sizing-of-flex-items-not-honored)*/
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .article [role="button"] {
+        width: auto;
+    }
+}
+
+.article-body img {
+    height: auto;
+    max-width: 100%;
+}
+
+.article-body ul,
+.article-body ol {
+    padding-left: 20px;
+    list-style-position: outside;
+    margin: 20px 0 20px 20px;
+}
+
+.article-body ul>ul,
+.article-body ol>ol,
+.article-body ol>ul,
+.article-body ul>ol {
+    margin: 0;
+}
+
+.article-body ul {
+    list-style-type: disc;
+}
+
+.article-body a:visited {
+    color: #000;
+}
+
+.article-body pre {
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 10px 15px;
+    overflow: auto;
+    white-space: pre;
+}
+
+.article-body>p:last-child {
+    margin-bottom: 0;
+}
+
+.article-content {
+    line-height: 1.6;
+    margin: 40px 0;
+    word-wrap: break-word;
+}
+
+.article-footer {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.article-sidebar {
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    flex: 1 0 auto;
+    margin: 20px 0 20px 0;
+    padding: 0;
+}
+
+@media (min-width: 1024px) {
+    .article-sidebar {
+        border: 0;
+        flex: 0 0 17%;
+        height: auto;
+    }
+}
+
+.article-return-to-top {
+    border-top: 1px solid #ddd;
+}
+
+@media (min-width: 1024px) {
+    .article-return-to-top {
+        display: none;
+    }
+}
+
+.article-return-to-top a {
+    color: #011532;
+    display: block;
+    padding: 20px 0;
+}
+
+.article-return-to-top a:hover,
+.article-return-to-top a:focus {
+    text-decoration: none;
+}
+
+.article-return-to-top .icon-arrow-up::before {
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+[dir=rtl] .article-return-to-top .icon-arrow-up::before {
+    margin-right: 10px;
+}
+
+
+.sidenav-title {
+    font-size: 18px;
+    position: relative;
+}
+
+.sidenav-item {
+    border-radius: 4px;
+    color: #011532;
+    display: block;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.sidenav-item.current-article,
+.sidenav-item:hover {
+    /*background-color: #011532;*/
+    /*color: #ffffff;*/
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.img-container {
+    display: flex;
+    flex-flow: column wrap;
+    height: 800px;
+}
+
+#sales-article .img-container {
+    height: 500px;
+}
+
+#education-article,
+#branding-article,
+#video-article {
+    display: none;
+}
+
+#education-article .img-container {
+    height: 500px;
+}
+
+#branding-article .img-container {
+    height: 200px;
+}
+
+#video-article .img-container {
+    flex-flow: row wrap;
+    height: 500px;
+}
+
+.img-container > div {
+    max-width: 32%;
+    padding: 1%;
+}
+
+#video-article .img-container > div {
+    max-width: 98%;
+    padding: 1%;
+}
+
+.img-container > div:nth-child(even) {
+    /*padding:2%;*/
+}
+
+.img-container img,
+#popup-image-viewer,
+#popup-video-viewer {
+    cursor: pointer;
+}
+
+.popup-dialog {
+    display: none;
+    position: fixed;
+    top: 66px;
+    bottom: 8px;
+    left: 8px;
+    right: 8px;
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+
+#popup-generic-content {
+    /*position: relative;
+     top: 60px;
+     height: 560px;
+     overflow-y: scroll;*/
+    width: 100%;
+}
+
+#popup-content-wrapper {
+    position: relative;
+    top: 30px;
+    height: 500px;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    /* enable momentum scrolling on iOS - uses hardware acceleration */
+}
+
+#popup-content-wrapper>* {
+    -webkit-transform: translateZ(0px);
+    /* enable momentum scrolling on iOS - activates hardware acceleration on direct decedents of #popup-content-wrapper, to fix overlay bugs */
+}
+
+
+.popup-dialog .popup-title .close-button {
+    float: right;
+    width: 30px;
+    height: 30px;
+    background-image: url('assets/thumbnails/btn-close.png');
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    padding: 0;
+}
+
+.fullscreen-popup-dialog {
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    border: none;
+    background-color: black;
+}
+
+#popup-image-viewer,
+#popup-video-viewer {
+    z-index: 200;
+}
+
+#popup-image-viewer #popup-image-viewer-content,
+#popup-video-viewer #popup-video-viewer-content {
+    display: table-cell;
+    width: 1024px;
+    height: 748px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#popup-image-viewer #imagecontent,
+#popup-video-viewer #videocontent {
+    max-width: 1024px;
+    max-height: 748px;
+}
+
+#popup-image-viewer.popup-dialog,
+#popup-video-viewer.popup-dialog {
+    padding: 10px 0;
+}
+
+#overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: black;
+    opacity: 0.8;
+    display: none;
+    -webkit-transform: translateZ(0px);
+    /* activate hardware acceleration, since things above this overlay sometimes use hw accel */
+}
