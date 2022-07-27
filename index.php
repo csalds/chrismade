@@ -35,9 +35,11 @@
                             <li>
                                 <a href="#" class="sidenav-item" id="education">Education &amp; Promotion</a>
                             </li>
+                            <!--
                             <li>
                                 <a href="#" class="sidenav-item" id="branding">Branding</a>
                             </li>
+                            -->
                             <li>
                                 <a href="#" class="sidenav-item" id="video">Video</a>
                             </li>
@@ -107,7 +109,7 @@
 
                 </article>
 
-
+                <!--
                 <article id="branding-article" class="article">
 
                     <header class="article-header">
@@ -135,7 +137,7 @@
                     </footer>
 
                 </article>
-
+                -->
 
                 <article id="video-article" class="article">
 
