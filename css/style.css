@@ -102,8 +102,8 @@ strong {
 /* Sidebar navigation that collapses on mobile */
 .collapsible-sidebar {
     flex: 1;
-    max-height: 45px;
-    overflow: hidden;
+    /*max-height: 45px;
+    overflow: hidden;*/
     padding: 10px 0;
     position: relative;
 }
@@ -118,11 +118,11 @@ strong {
 .collapsible-sidebar[aria-expanded=true] {
     max-height: none;
 }
-
+/*
 .collapsible-sidebar[aria-expanded=true] .collapsible-sidebar-title:after {
     content: "\2715";
 }
-
+*/
 @media (min-width: 1024px) {
     .collapsible-sidebar[aria-expanded=true] .collapsible-sidebar-title:after {
         display: none;
@@ -137,7 +137,7 @@ strong {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    content: "\25BE";
+    /*content: "\25BE";*/
     position: absolute;
     right: 10px;
 }
@@ -359,14 +359,14 @@ ul {
     height: 800px;
 }
 
-#sales-article .img-container {
-    height: 500px;
-}
-
 #education-article,
 #branding-article,
 #video-article {
     display: none;
+}
+
+#sales-article .img-container {
+    height: 500px;
 }
 
 #education-article .img-container {
@@ -380,6 +380,39 @@ ul {
 #video-article .img-container {
     flex-flow: row wrap;
     height: 500px;
+}
+
+@media (max-width: 1210px) {
+    
+    #sales-article .img-container,
+    #education-article .img-container,
+    #branding-article .img-container,
+    #video-article .img-container {
+        height: 370px;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    
+    #sales-article .img-container,
+    #education-article .img-container,
+    #branding-article .img-container,
+    #video-article .img-container {
+        height: 500px;
+    }
+
+}
+
+@media (max-width: 800px) {
+    
+    #sales-article .img-container,
+    #education-article .img-container,
+    #branding-article .img-container,
+    #video-article .img-container {
+        height: 370px;
+    }
+
 }
 
 .img-container > div {

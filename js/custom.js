@@ -9,10 +9,10 @@ var currentFullscreenPopup = null;
 
 $(document).ready(function () {
 
-    $('.img-container img').each(function () {
+    $('.img-container a').each(function () {
         $(this).attr({
             'data-link-target': "fullscreenImage",
-            'data-fullscreen-image-src': $(this).attr('src')
+            'data-fullscreen-image-src': $(this).find('img').attr('src')
         });
     });
 
@@ -194,8 +194,18 @@ function popupFullscreenDialog(fullscreenDialogId, completeCallback) {
             complete: completeCallback
         });
         currentFullscreenPopup = fullscreenDialogId;
+        $('#' + fullscreenDialogId).focus();
+        
+        $(document).on('keydown', function(e) {
+            if(e.key === "Escape" || e.key == 27) {
+                closeFullscreenDialog(fullscreenDialogId);
+              return; 
+            }
+
+          });
+
     } catch (err) {
-        showError(err);
+        console.log(err);
     }
 }
 
@@ -219,6 +229,6 @@ function closeFullscreenDialog(fullscreenDialogId) {
         }
         $('#overlay').fadeOut();
     } catch (err) {
-        showError(err);
+        console.log(err);
     }
 }
