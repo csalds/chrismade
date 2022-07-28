@@ -206,7 +206,9 @@
     </div>
     
     <script type="application/javascript">
-        const players = Array.from(document.querySelectorAll('.js-player')).map((p) => new Plyr(p));
+        const players = Array.from(document.querySelectorAll('.js-player')).map((p) => new Plyr(p, {
+            controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen']
+        }));
     </script>
 </body>
 
