@@ -95,8 +95,9 @@
                                 <p>Concepting, design and development of digital and physical consumer and retail promotions communicated through engagement microsites and physical in-store elements.</p>
                                 <div class="img-container" id="img-container">
                                     <div><img src="img/michelin-ayde.jpg" alt="Michelin Are You Drive Enough platform screenshot" title="Michelin Are You Drive Enough platform screenshot" /></div>
-                                    <div><img src="img/michelin-mli.jpg" alt="Michelin Learning Institute screenshot" title="Michelin Learning Institute screenshot" /></div>
                                     <div><img src="img/michelin-banner.jpg" alt="Retail banner image for Michelin" title="Retail banner image for Michelin" /></div>
+                                    <div><img src="img/michelin-mli.jpg" alt="Michelin Learning Institute screenshot" title="Michelin Learning Institute screenshot" /></div>
+                                    <div><img src="img/arm-techcon.png" alt="Wireframe and website for Arm" title="Wireframe and website for Arm" /></div>
                                 </div>
                             </div>
                         </div>
