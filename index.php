@@ -1,7 +1,7 @@
 <?php ?>
 
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
     <title>Chris Made It</title>
@@ -27,7 +27,7 @@
 
                 <section class="article-sidebar">
                     <section class="section-articles collapsible-sidebar">
-                        <img src="img/chris-made-it_k.svg" width="150" style="margin-bottom:20px;" />
+                        <img src="img/chris-made-it_k.svg" alt="Chris Made Logo" width="150" style="margin-bottom:20px;" />
                         <h3 class="collapsible-sidebar-title sidenav-title">Project Categories</h3>
                         <ul>
                             <li>
