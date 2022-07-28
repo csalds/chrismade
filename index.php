@@ -27,7 +27,7 @@
 
                 <section class="article-sidebar">
                     <section class="section-articles collapsible-sidebar">
-                        <img src="img/chris-made-it_k.svg" width="150" style="margin-bottom:10px;" />
+                        <img src="img/chris-made-it_k.svg" width="150" style="margin-bottom:20px;" />
                         <h3 class="collapsible-sidebar-title sidenav-title">Project Categories</h3>
                         <ul>
                             <li>
@@ -189,7 +189,9 @@
             </div>
         </div>
     </main>
-
+    
+    <a class="email-link" href="mailto:info@chrismade.it" target="_blank" title="Email info@chrismade.it">info@ChrisMade.It</a>
+    
     <div id="overlay" data-link-target="closePopup" style="display: none;">
     </div>
     <div id="main-popups-container">
