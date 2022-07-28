@@ -382,7 +382,7 @@ ul {
 
 #video-article .img-container {
     flex-flow: row wrap;
-    height: 500px;
+    height: auto;
 }
 
 @media (max-width: 1210px) {
