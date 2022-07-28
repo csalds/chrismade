@@ -27,7 +27,7 @@
 
                 <section class="article-sidebar">
                     <section class="section-articles collapsible-sidebar">
-                        <img src="img/chris-made-it.svg" width="150" style="margin-bottom:10px;" />
+                        <img src="img/chris-made-it_k.svg" width="150" style="margin-bottom:10px;" />
                         <h3 class="collapsible-sidebar-title sidenav-title">Project Categories</h3>
                         <ul>
                             <li>
